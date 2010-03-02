@@ -12,12 +12,13 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "bcms_fckeditor"
-    gem.summary = %Q{A module for replacing the default WYSIWIG editor of browsercms with FCKEditor 2.6.3.}
-    gem.description = %Q{WYSIWIG editor for browsercms.}
+    gem.summary = %Q{A WYSIWIG editor for browsercms}
+    gem.description = %Q{A module for replacing the default WYSIWIG editor of browsercms with FCKEditor 2.6.3.}
     gem.email = "github@browsermedia.com"
-    gem.homepage = "http://www.browsercms.org"
+    gem.homepage = "http://github.com/browsermedia/bcms_fckeditor"
     gem.authors = ["BrowserMedia"]
     gem.rubyforge_project = 'bcms_fckeditor'
+    gem.add_dependency('browsercms', '>=3.1.0')
     gem.files += Dir["public/bcms/fckeditor/**/*"]
     gem.files += Dir["public/bcms_config/fckeditor/fckstyles.xml"]
     gem.files += Dir["lib/bcms_fckeditor.rb"]
