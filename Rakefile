@@ -19,7 +19,7 @@ begin
     gem.authors = ["BrowserMedia"]
     gem.rubyforge_project = 'bcms_fckeditor'
     gem.add_dependency('browsercms', '>=3.1.0')
-    gem.files += Dir["public/bcms/fckeditor/**/*"]
+    gem.files = Dir["public/bcms/fckeditor/**/*"]
     gem.files += Dir["public/bcms_config/fckeditor/fckstyles.xml"]
     gem.files += Dir["lib/bcms_fckeditor.rb"]
     gem.files += Dir["lib/bcms_fckeditor/*"]
