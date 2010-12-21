@@ -4,7 +4,7 @@ Cms.wysiwig_js = ['/bcms/fckeditor/fckeditor.js', '/bcms/fckeditor/editor.js']
 # FCKeditor's file browser functionality is handled by SectionController#file_browser.
 # However, the current implementation does not handle file uploads or cerating
 # new sections or 'folders'.
-# This patch implements a FCKeditor Ruby connector that plays well with BrowserCMS.
+# This patch implements a FCKeditor connector that plays well with BrowserCMS.
 Cms::SectionsController.class_eval do
 
   protect_from_forgery :except => :file_browser
@@ -28,7 +28,8 @@ Cms::SectionsController.class_eval do
   protected
 
   # Sections created through FCKeditor's file browser, are assigned to groups
-  # "guest", "cms-admin" and "content-editor".
+  # "guest", "cms-admin" and "content-editor" and are hidden from menues by
+  # default.
   def create_section
     section_path = build_path(params[:NewFolderName].to_slug)
 
@@ -36,7 +37,8 @@ Cms::SectionsController.class_eval do
       Section.create!(:name => params[:NewFolderName],
                       :path => section_path,
                       :parent_id => @section.id,
-                      :group_ids => [1, 2, 3])
+                      :group_ids => [1, 2, 3],
+                      :hidden => true)
       @result = "0"
     rescue Exception => e
       build_error_string(e)
