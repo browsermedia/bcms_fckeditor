@@ -1,7 +1,7 @@
 require 'bcms_fckeditor/routes'
 Cms.wysiwig_js = ['/bcms/fckeditor/fckeditor.js', '/bcms/fckeditor/editor.js']
 
-# FCKeditor's file browser functionality is handled by SectionController#file_browser.
+# FCKeditor's file browser functionality is handled by Cms::SectionController#file_browser.
 # However, the current implementation does not handle file uploads or cerating
 # new sections or 'folders'.
 # This patch implements a FCKeditor connector that plays well with BrowserCMS.
@@ -28,7 +28,7 @@ Cms::SectionsController.class_eval do
   protected
 
   # Sections created through FCKeditor's file browser, are assigned to groups
-  # "guest", "cms-admin" and "content-editor" and are hidden from menues by
+  # "guest", "cms-admin" and "content-editor" and are hidden from menus by
   # default.
   def create_section
     section_path = build_path(params[:NewFolderName].to_slug)
@@ -39,12 +39,12 @@ Cms::SectionsController.class_eval do
                       :parent_id => @section.id,
                       :group_ids => [1, 2, 3],
                       :hidden => true)
-      @result = "0"
+      result = "0"
     rescue Exception => e
-      build_error_string(e)
+      result = build_error_string(e)
     end
 
-    render_response
+    render_response(result)
   end
 
   # According to FCKeditor's documentation, server side connectors should rename
@@ -69,20 +69,21 @@ Cms::SectionsController.class_eval do
       build_error_string(e)
     end
 
-    render_response
+    render_response(result)
   end
 
   private
 
-  def error_string(e)
-    @result = "1, '#{escape_javascript(e.message.to_sentence)}'"
+  def build_error_string(e)
+    "1, '#{escape_javascript(e.message.to_sentence)}'"
   end
 
   def build_path(resource_name)
     "%s%s%s" % [@section.path, @section.path == "/" ? "" : "/", resource_name]
   end
 
-  def render_response
-    render :text => %Q{<script type="text/javascript">window.parent.frames['frmUpload'].OnUploadCompleted(#{@result});</script>}, :layout => false
+  def render_response(result)
+    result_string = %Q{<script type="text/javascript">window.parent.frames['frmUpload'].OnUploadCompleted(#{result});</script>}
+    render :text => result_string, :layout => false
   end
 end
