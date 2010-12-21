@@ -64,9 +64,9 @@ Cms::SectionsController.class_eval do
                     :attachment_file_path => file_path,
                     :publish_on_save => true,
                     :name => upfile.original_filename.capitalize)
-      @result = "0"
+      result = "0"
     rescue Exception => e
-      build_error_string(e)
+      result = build_error_string(e)
     end
 
     render_response(result)

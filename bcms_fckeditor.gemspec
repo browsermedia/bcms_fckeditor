@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{bcms_fckeditor}
-  s.version = "1.0.3"
+  s.version = "1.0.4"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["BrowserMedia"]
-  s.date = %q{2010-12-20}
+  s.date = %q{2010-12-21}
   s.description = %q{A module for replacing the default WYSIWIG editor of browsercms with FCKEditor 2.6.3.}
   s.email = %q{github@browsermedia.com}
   s.extra_rdoc_files = [
