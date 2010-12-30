@@ -9,3 +9,4 @@ db/schema.rb
 tmp/restart.txt
 public/cache
 *~
+bcms_fckeditor_log.txt

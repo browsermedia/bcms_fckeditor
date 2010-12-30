@@ -15,7 +15,7 @@ the editor's file browser UI.
 ### 1. Edit config/environment.rb
 
     config.gem "browsercms"
-    config.gem "bcms_settings"
+    config.gem "bcms_fckeditor"
 
 ### 2. Run the following command
 
