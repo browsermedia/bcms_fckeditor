@@ -1,3 +1,11 @@
+PATH
+  remote: .
+  specs:
+    bcms_fckeditor (1.1.0)
+      browsercms (>= 3.3.0)
+      mysql
+      rails (= 3.0.3)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -78,6 +86,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcms_fckeditor!
   browsercms (>= 3.3.0)
   jeweler
   mysql
