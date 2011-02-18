@@ -12,8 +12,7 @@ begin
     gem.rubyforge_project = 'bcms_fckeditor'
     gem.files = Dir["public/bcms/fckeditor/**/*"]
     gem.files += Dir["public/bcms_config/fckeditor/fckstyles.xml"]
-    gem.files += Dir["lib/bcms_fckeditor.rb"]
-    gem.files += Dir["lib/bcms_fckeditor/*"]
+    gem.files += Dir["lib/**/*"]
     gem.files -= Dir["lib/tasks/**/*"]
 
 

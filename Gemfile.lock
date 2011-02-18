@@ -80,5 +80,6 @@ PLATFORMS
 DEPENDENCIES
   browsercms (>= 3.3.0)
   jeweler
+  mysql
   rails (= 3.0.3)
   sqlite3-ruby

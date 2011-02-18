@@ -9,3 +9,4 @@ group :development, :test do
 end
 
 
+gem "mysql"
