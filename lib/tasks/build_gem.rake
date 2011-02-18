@@ -10,12 +10,11 @@ begin
     gem.homepage = "http://github.com/browsermedia/bcms_fckeditor"
     gem.authors = ["BrowserMedia"]
     gem.rubyforge_project = 'bcms_fckeditor'
-    gem.add_dependency('browsercms', '>=3.1.0')
     gem.files = Dir["public/bcms/fckeditor/**/*"]
     gem.files += Dir["public/bcms_config/fckeditor/fckstyles.xml"]
     gem.files += Dir["lib/bcms_fckeditor.rb"]
     gem.files += Dir["lib/bcms_fckeditor/*"]
-    gem.files += Dir["rails/init.rb"]
+    gem.files -= Dir["lib/tasks/**/*"]
 
 
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
