@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["BrowserMedia"]
-  s.date = %q{2011-02-18}
+  s.date = %q{2011-03-11}
   s.description = %q{A module for replacing the default WYSIWIG editor of browsercms with FCKEditor 2.6.3.}
   s.email = %q{github@browsermedia.com}
   s.extra_rdoc_files = [
@@ -23,6 +23,7 @@ Gem::Specification.new do |s|
     "lib/bcms_fckeditor/section_controller_extensions.rb",
     "lib/generators/bcms_fckeditor/install/USAGE",
     "lib/generators/bcms_fckeditor/install/install_generator.rb",
+    "lib/generators/bcms_fckeditor/install/templates/fckstyles.xml",
     "public/bcms/fckeditor/README",
     "public/bcms/fckeditor/editor.js",
     "public/bcms/fckeditor/editor/css/behaviors/disablehandles.htc",
@@ -362,12 +363,14 @@ Gem::Specification.new do |s|
       s.add_runtime_dependency(%q<rails>, ["= 3.0.3"])
       s.add_runtime_dependency(%q<browsercms>, [">= 3.3.0"])
       s.add_runtime_dependency(%q<mysql>, [">= 0"])
+      s.add_runtime_dependency(%q<bcms_fckeditor>, [">= 0"])
       s.add_development_dependency(%q<jeweler>, [">= 0"])
       s.add_development_dependency(%q<sqlite3-ruby>, [">= 0"])
     else
       s.add_dependency(%q<rails>, ["= 3.0.3"])
       s.add_dependency(%q<browsercms>, [">= 3.3.0"])
       s.add_dependency(%q<mysql>, [">= 0"])
+      s.add_dependency(%q<bcms_fckeditor>, [">= 0"])
       s.add_dependency(%q<jeweler>, [">= 0"])
       s.add_dependency(%q<sqlite3-ruby>, [">= 0"])
     end
@@ -375,6 +378,7 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<rails>, ["= 3.0.3"])
     s.add_dependency(%q<browsercms>, [">= 3.3.0"])
     s.add_dependency(%q<mysql>, [">= 0"])
+    s.add_dependency(%q<bcms_fckeditor>, [">= 0"])
     s.add_dependency(%q<jeweler>, [">= 0"])
     s.add_dependency(%q<sqlite3-ruby>, [">= 0"])
   end

@@ -2,6 +2,7 @@ PATH
   remote: .
   specs:
     bcms_fckeditor (1.1.0)
+      bcms_fckeditor
       browsercms (>= 3.3.0)
       mysql
       rails (= 3.0.3)
