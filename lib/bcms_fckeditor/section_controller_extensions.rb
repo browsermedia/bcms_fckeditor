@@ -1,5 +1,3 @@
-Cms.wysiwig_js = ['/bcms/fckeditor/fckeditor.js', '/bcms/fckeditor/editor.js']
-
 # FCKeditor's file browser functionality is handled by Cms::SectionController#file_browser.
 # However, the current implementation does not handle file uploads or cerating
 # new sections or 'folders'.

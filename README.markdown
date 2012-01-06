@@ -1,10 +1,11 @@
 # BrowserCMS FCKEditor WYSIWIG editor module
 
-Installing this module will change the WYSIWIG editor from the default CKEditor to FCKEditor
-2.6.3 for editing Html Blocks.
+Installing this module will change the WYSIWIG editor from the default CKEditor to FCKEditor for html editing. 
 
-As of version 1.0.4, it is possible to upload images and create sections through
-the editor's file browser UI.
+## Features
+
+* Upload Images through the Browse UI
+* Create new sections through Browse UI
 
 ## Installation
 
@@ -22,13 +23,9 @@ It is put in this directory to allow you to edit it without worry that it will b
 
 ## Uploading images and adding sections
 
-As of version 1.0.4 it is possible to upload images while navigating the server using FCKeditor's file browser. Adding images this way, is essentially the same as adding a new ImageBlock through the CMS's UI. So, if an image is uploded through the file browser, a new ImageBlock will be created with it's corresponding attachment.
+It is possible to upload images while navigating the server using FCKeditor's file browser. Adding images this way, is essentially the same as adding a new ImageBlock through the CMS's UI. So, if an image is uploded through the file browser, a new ImageBlock will be created with it's corresponding attachment.
 
-It is also possible to add new 'folders' through the file browser (which are just hidden sections in BrowserCMS's parlance) and can be used to orginize uploaded images.
+It is also possible to add new 'folders' through the file browser (which are just hidden sections in BrowserCMS's parlance) and can be used to organize uploaded images.
 
 ## Tips for building your own WYSIWIG module
-If you would prefer to build your own WYSIWIG module, you will need to tell the CMS to use your javascript instead of the FCKEditor (or CKEditor) javascript.  This configuration is set in #{RAILS_ROOT}/lib/bcms_fckeditor.rb 
-
-	Cms.wysiwig_js = ['/bcms/fckeditor/fckeditor.js', '/bcms/fckeditor/editor.js']
-
-This statement sets the source of the javascript files for script tags in the head of the content-edit pages.
+If you would prefer to build your own WYSIWIG module, you will need to tell the CMS to use your javascript instead of the FCKEditor (or CKEditor) javascript.  Review the BcmsFckeditor::Engine for details on how to do this (lib/bcms_fckeditor/engine.rb)
