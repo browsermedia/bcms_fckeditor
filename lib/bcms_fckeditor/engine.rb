@@ -1,13 +1,11 @@
 require 'browsercms'
+
 module BcmsFckeditor
   class Engine < Rails::Engine
     include Cms::Module
     
-    js_files = config.action_view.javascript_expansions[:bcms_core]
-    if js_files.include?(Cms.wysiwig_js)
-      js_files.delete(Cms.wysiwig_js)
-      js_files << '/bcms/fckeditor/fckeditor.js'
-      js_files << '/bcms/fckeditor/editor.js'
+    config.to_prepare do
+      Cms.content_editor = "fckeditor"
     end
         
     initializer "bcms_fckeditor", :after=>'disable_dependency_loading' do 

@@ -1,10 +1,19 @@
-source 'http://rubygems.org'
+source "http://rubygems.org"
 
-group :development, :test do
-	gem 'sqlite3-ruby', :require => 'sqlite3'
-end
-
-gem "mysql"
-
-# Load this module as a gem, so that engines and other gem requirements work.
+# Declare your gem's dependencies in bcms_fckeditor.gemspec.
+# Bundler will treat runtime dependencies like base dependencies, and
+# development dependencies will be added by default to the :development group.
 gemspec
+
+gem "sqlite3", :group => :development
+gem "thin", :group => :development
+# jquery-rails is used by the dummy application
+gem "jquery-rails"
+
+# Declare any dependencies that are still in development here instead of in
+# your gemspec. These might include edge Rails or gems from your path or
+# Git. Remember to move these dependencies to your gemspec before releasing
+# your gem to rubygems.org.
+
+# To use debugger
+# gem 'ruby-debug19', :require => 'ruby-debug'

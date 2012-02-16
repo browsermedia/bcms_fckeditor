@@ -7,15 +7,15 @@ Gem::Specification.new do |s|
   s.version = BcmsFckEditor::VERSION
 
   s.authors = ["BrowserMedia"]
-  s.date = %q{2011-03-11}
   s.description = %q{A BrowserCMS module that makes FCKEditor the default html editor.}
   s.email = %q{github@browsermedia.com}
   s.extra_rdoc_files = [
     "LICENSE.txt",
     "README.markdown"
   ]
-  s.files = Dir["public/bcms/fckeditor/**/*"]
-  s.files += Dir["public/bcms_config/fckeditor/fckstyles.xml"]
+  s.files = Dir["app/**/*"]
+  s.files += Dir["config/**/*"]
+  s.files += Dir["db/**/*"]
   s.files += Dir["lib/**/*"]
   
   s.homepage = %q{http://github.com/browsermedia/bcms_fckeditor}
@@ -24,6 +24,6 @@ Gem::Specification.new do |s|
   s.rubygems_version = %q{1.3.7}
   s.summary = %q{A WYSIWIG editor for BrowserCms}
   s.test_files = Dir['test/**/*']
-  s.add_dependency(%q<browsercms>, ["~> 3.3.0"])
+  s.test_files -= Dir['test/dummy/**/*']
+  s.add_dependency(%q<browsercms>, ["~> 3.4.0"])
 end
-
