@@ -1,7 +1,8 @@
 .bundle/
-.DS_Store
 log/*.log
 pkg/
 test/dummy/db/*.sqlite3
 test/dummy/log/*.log
 test/dummy/tmp/
+test/dummy/.sass-cache
+.DS_Store

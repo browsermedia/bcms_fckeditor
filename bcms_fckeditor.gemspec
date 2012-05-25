@@ -13,17 +13,14 @@ Gem::Specification.new do |s|
     "LICENSE.txt",
     "README.markdown"
   ]
-  s.files = Dir["app/**/*"]
-  s.files += Dir["config/**/*"]
-  s.files += Dir["db/**/*"]
-  s.files += Dir["lib/**/*"]
+  s.files = Dir["{app,config,db,lib}/**/*"]
+  s.files += Dir["Gemfile", "LICENSE.txt", "COPYRIGHT.txt", "GPL.txt" ]
+  s.test_files += Dir["test/**/*"]
+  s.test_files -= Dir['test/dummy/**/*']
+  s.add_dependency("browsercms", "< 3.6.0", ">= 3.5.0.rc4")
   
   s.homepage = %q{http://github.com/browsermedia/bcms_fckeditor}
   s.require_paths = ["lib"]
-  s.rubyforge_project = %q{bcms_fckeditor}
-  s.rubygems_version = %q{1.3.7}
+  s.rubyforge_project = s.name
   s.summary = %q{A WYSIWIG editor for BrowserCms}
-  s.test_files = Dir['test/**/*']
-  s.test_files -= Dir['test/dummy/**/*']
-  s.add_dependency(%q<browsercms>, ["~> 3.4.0"])
 end
