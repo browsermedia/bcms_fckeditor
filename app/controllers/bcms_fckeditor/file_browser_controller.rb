@@ -91,8 +91,8 @@ module BcmsFckeditor
     end
     
     def render_response(result)
-      result_string = %Q{<script type="text/javascript">window.parent.frames['frmUpload'].OnUploadCompleted(#{result});</script>}.html_safe
-      render :text => result_string, :layout => false
+      result_string = %Q{<script type="text/javascript">window.parent.frames['frmUpload'].OnUploadCompleted(#{result});</script>}
+      render :js => result_string, :layout => false
     end
   end
 end

@@ -29,3 +29,7 @@ It is also possible to add new 'folders' through the file browser (which are jus
 
 ## Tips for building your own WYSIWIG module
 If you would prefer to build your own WYSIWIG module, you will need to tell the CMS to use your javascript instead of the FCKEditor (or CKEditor) javascript.  Review the BcmsFckeditor::Engine for details on how to do this (lib/bcms_fckeditor/engine.rb)
+
+## Issues
+
+* When uploading a new file, the page does not automatically refresh on success or error. This is presumably due to changes in how browsers handle javascript being sent to random frames. Needs to reworked to be a call back (like CreateFolder).
