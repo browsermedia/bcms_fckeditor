@@ -33,3 +33,4 @@ If you would prefer to build your own WYSIWIG module, you will need to tell the 
 ## Issues
 
 * When uploading a new file, the page does not automatically refresh on success or error. This is presumably due to changes in how browsers handle javascript being sent to random frames. Needs to reworked to be a call back (like CreateFolder).
+* Uploading files always assigns them them to the '/' path, which is probably wrong.
