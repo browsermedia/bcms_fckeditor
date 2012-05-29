@@ -4,18 +4,6 @@ PATH
     bcms_fckeditor (1.2.0)
       browsercms (>= 3.5.0.rc4, < 3.6.0)
 
-PATH
-  remote: ~/projects/browsercms
-  specs:
-    browsercms (3.5.0.rc4)
-      ancestry (~> 1.2.4)
-      ckeditor_rails (~> 3.6.2.2)
-      jquery-rails (~> 2.0)
-      paperclip (~> 3.0.3)
-      rails (~> 3.2.0)
-      sass-rails
-      term-ansicolor
-
 GEM
   remote: http://rubygems.org/
   specs:
@@ -49,6 +37,14 @@ GEM
     ancestry (1.2.5)
       activerecord (>= 2.2.2)
     arel (3.0.2)
+    browsercms (3.5.0.rc4)
+      ancestry (~> 1.2.4)
+      ckeditor_rails (~> 3.6.2.2)
+      jquery-rails (~> 2.0)
+      paperclip (~> 3.0.3)
+      rails (~> 3.2.0)
+      sass-rails
+      term-ansicolor
     builder (3.0.0)
     ckeditor_rails (3.6.2.2)
       railties (~> 3.0)
@@ -129,6 +125,5 @@ PLATFORMS
 
 DEPENDENCIES
   bcms_fckeditor!
-  browsercms!
   sqlite3
   thin
