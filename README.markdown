@@ -1,3 +1,9 @@
+# FCKEditor module is over
+
+This module should no longer be necessary going forward, as there the KCFinder provides the last major bit of functionality (file upload/linking) that was preventing full adoption of the CKEditor for everyone.
+
+You can find the new module here: https://github.com/browsermedia/bcms_kcfinder
+
 # BrowserCMS FCKEditor WYSIWIG editor module
 
 Installing this module will change the WYSIWIG editor from the default CKEditor to FCKEditor for html editing. 
